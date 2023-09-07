@@ -1,4 +1,6 @@
+import 'package:academia_flutter_flutter/pages/container/container_page.dart';
 import 'package:academia_flutter_flutter/pages/home/home_page.dart';
+import 'package:academia_flutter_flutter/pages/rows_collumns/rows_columns.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -12,12 +14,17 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
-      theme: ThemeData(       
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
-        useMaterial3: true,
-      ),
-      home:HomePage(),
+      debugShowCheckedModeBanner: false,
+      title: 'Academia do flutter',
+      // theme: ThemeData(       
+      //   colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
+      //   useMaterial3: true,
+      // ),
+      routes: {
+        HomePage.routName:(_) => HomePage(),
+        ContainerPage.routName :(_) => ContainerPage(),
+        RowsColumns.routName:(_) => RowsColumns()
+      },
     );
   }
 }

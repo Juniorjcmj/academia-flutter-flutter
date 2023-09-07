@@ -2,6 +2,9 @@
 
 import 'package:flutter/material.dart';
 
+import '../container/container_page.dart';
+import '../rows_collumns/rows_columns.dart';
+
 
 
 enum PopupMenuPages{
@@ -10,12 +13,14 @@ enum PopupMenuPages{
 }
 class HomePage extends StatelessWidget {
 
-  static final String routName = '/home';
+  static final String routName = '/';
+
   const HomePage({ super.key });
 
    @override
    Widget build(BuildContext context) {
        return Scaffold(
+           
            appBar: AppBar(title: const Text('Home Page'),
            actions: [
             PopupMenuButton<PopupMenuPages>(
