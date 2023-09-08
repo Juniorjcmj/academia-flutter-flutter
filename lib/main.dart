@@ -1,9 +1,9 @@
 import 'package:academia_flutter_flutter/pages/container/container_page.dart';
 import 'package:academia_flutter_flutter/pages/home/home_page.dart';
-import 'package:academia_flutter_flutter/pages/midia_quary/media_query._page.dart';
+import 'package:academia_flutter_flutter/pages/layout_builder/layout_builder_page.dart';
+import 'package:academia_flutter_flutter/pages/media_query/media_query._page.dart';
 import 'package:academia_flutter_flutter/pages/rows_collumns/rows_columns.dart';
 import 'package:device_preview/device_preview.dart';
-import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -33,7 +33,8 @@ class MyApp extends StatelessWidget {
         HomePage.routName: (_) => HomePage(),
         ContainerPage.routName: (_) => ContainerPage(),
         RowsColumns.routName: (_) => RowsColumns(),
-        MediaQueryPage.routName: (_) => MediaQueryPage()
+        MediaQueryPage.routName: (_) => MediaQueryPage(),
+        LayoutBuilderPage.routName :(_) => LayoutBuilderPage()
       },
     );
   }

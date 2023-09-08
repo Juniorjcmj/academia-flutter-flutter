@@ -1,12 +1,13 @@
 // ignore_for_file: prefer_const_constructors
 
-import 'package:academia_flutter_flutter/pages/midia_quary/media_query._page.dart';
+import 'package:academia_flutter_flutter/pages/layout_builder/layout_builder_page.dart';
+import 'package:academia_flutter_flutter/pages/media_query/media_query._page.dart';
 import 'package:flutter/material.dart';
 
 import '../container/container_page.dart';
 import '../rows_collumns/rows_columns.dart';
 
-enum PopupMenuPages { container, rows_columns, media_query }
+enum PopupMenuPages { container, rows_columns, media_query, layout_builder }
 
 class HomePage extends StatelessWidget {
   static final String routName = '/';
@@ -32,6 +33,9 @@ class HomePage extends StatelessWidget {
                   case PopupMenuPages.media_query:
                     Navigator.of(context).pushNamed(MediaQueryPage.routName);
                     break;
+                    case PopupMenuPages.layout_builder:
+                    Navigator.of(context).pushNamed(LayoutBuilderPage.routName);
+                    break;
                 }
               },
               itemBuilder: (BuildContext context) {
@@ -47,6 +51,10 @@ class HomePage extends StatelessWidget {
                   PopupMenuItem<PopupMenuPages>(
                     value: PopupMenuPages.media_query,
                     child: Text('Midia Query'),
+                  ), 
+                   PopupMenuItem<PopupMenuPages>(
+                    value: PopupMenuPages.layout_builder,
+                    child: Text('Layout Builder'),
                   )
                 ];
               }),
