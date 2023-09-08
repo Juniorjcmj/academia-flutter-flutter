@@ -1,5 +1,6 @@
 import 'package:academia_flutter_flutter/pages/container/container_page.dart';
 import 'package:academia_flutter_flutter/pages/home/home_page.dart';
+import 'package:academia_flutter_flutter/pages/midia_quary/media_query._page.dart';
 import 'package:academia_flutter_flutter/pages/rows_collumns/rows_columns.dart';
 import 'package:flutter/material.dart';
 
@@ -21,9 +22,10 @@ class MyApp extends StatelessWidget {
       //   useMaterial3: true,
       // ),
       routes: {
-        HomePage.routName:(_) => HomePage(),
+        HomePage.routName:      (_) => HomePage(),
         ContainerPage.routName :(_) => ContainerPage(),
-        RowsColumns.routName:(_) => RowsColumns()
+        RowsColumns.routName:   (_) => RowsColumns(),
+        MediaQueryPage.routName:(_) => MediaQueryPage()
       },
     );
   }
