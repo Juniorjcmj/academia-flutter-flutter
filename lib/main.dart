@@ -1,3 +1,4 @@
+import 'package:academia_flutter_flutter/pages/botoes_rotacao_texto/botoes_rotacao_texto.dart';
 import 'package:academia_flutter_flutter/pages/container/container_page.dart';
 import 'package:academia_flutter_flutter/pages/home/home_page.dart';
 import 'package:academia_flutter_flutter/pages/layout_builder/layout_builder_page.dart';
@@ -34,7 +35,8 @@ class MyApp extends StatelessWidget {
         ContainerPage.routName: (_) => ContainerPage(),
         RowsColumns.routName: (_) => RowsColumns(),
         MediaQueryPage.routName: (_) => MediaQueryPage(),
-        LayoutBuilderPage.routName :(_) => LayoutBuilderPage()
+        LayoutBuilderPage.routName :(_) => LayoutBuilderPage(),
+        BotoesRotacaoTexto.routName: (_) => BotoesRotacaoTexto()
       },
     );
   }

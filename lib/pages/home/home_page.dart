@@ -1,5 +1,6 @@
 // ignore_for_file: prefer_const_constructors
 
+import 'package:academia_flutter_flutter/pages/botoes_rotacao_texto/botoes_rotacao_texto.dart';
 import 'package:academia_flutter_flutter/pages/layout_builder/layout_builder_page.dart';
 import 'package:academia_flutter_flutter/pages/media_query/media_query._page.dart';
 import 'package:flutter/material.dart';
@@ -7,7 +8,12 @@ import 'package:flutter/material.dart';
 import '../container/container_page.dart';
 import '../rows_collumns/rows_columns.dart';
 
-enum PopupMenuPages { container, rows_columns, media_query, layout_builder }
+enum PopupMenuPages { 
+  container, 
+  rows_columns, 
+  media_query, 
+  layout_builder,
+  botoes_rotacao_texto}
 
 class HomePage extends StatelessWidget {
   static final String routName = '/';
@@ -18,7 +24,7 @@ class HomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Home Page'),
+        title: const Text('Pagina Inicial'),
         actions: [
           PopupMenuButton<PopupMenuPages>(
               tooltip: "Selecione uma opção",
@@ -35,6 +41,9 @@ class HomePage extends StatelessWidget {
                     break;
                     case PopupMenuPages.layout_builder:
                     Navigator.of(context).pushNamed(LayoutBuilderPage.routName);
+                    break;
+                     case PopupMenuPages.botoes_rotacao_texto:
+                    Navigator.of(context).pushNamed(BotoesRotacaoTexto.routName);
                     break;
                 }
               },
@@ -55,6 +64,10 @@ class HomePage extends StatelessWidget {
                    PopupMenuItem<PopupMenuPages>(
                     value: PopupMenuPages.layout_builder,
                     child: Text('Layout Builder'),
+                  ),
+                  PopupMenuItem<PopupMenuPages>(
+                    value: PopupMenuPages.botoes_rotacao_texto,
+                    child: Text('Botões Rotação texto'),
                   )
                 ];
               }),
