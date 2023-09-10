@@ -3,6 +3,7 @@
 import 'package:academia_flutter_flutter/pages/botoes_rotacao_texto/botoes_rotacao_texto.dart';
 import 'package:academia_flutter_flutter/pages/layout_builder/layout_builder_page.dart';
 import 'package:academia_flutter_flutter/pages/media_query/media_query._page.dart';
+import 'package:academia_flutter_flutter/pages/scrolls/listview_page.dart';
 import 'package:academia_flutter_flutter/pages/scrolls/singlechieldscrollview_page.dart';
 import 'package:flutter/material.dart';
 
@@ -15,7 +16,8 @@ enum PopupMenuPages {
   media_query, 
   layout_builder,
   botoes_rotacao_texto,
-  singlechieldscrollview}
+  singlechieldscrollview,
+  listview}
 
 class HomePage extends StatelessWidget {
   static final String routName = '/';
@@ -50,6 +52,9 @@ class HomePage extends StatelessWidget {
                     case PopupMenuPages.singlechieldscrollview:
                     Navigator.of(context).pushNamed(SinglechieldscrollviewPage.routName);
                     break;
+                     case PopupMenuPages.listview:
+                    Navigator.of(context).pushNamed(ListviewPage.routName);
+                    break;
                 }
               },
               itemBuilder: (BuildContext context) {
@@ -77,6 +82,10 @@ class HomePage extends StatelessWidget {
                   PopupMenuItem<PopupMenuPages>(
                     value: PopupMenuPages.singlechieldscrollview,
                     child: Text('SingleChieldScrollVview'),
+                  ),
+                   PopupMenuItem<PopupMenuPages>(
+                    value: PopupMenuPages.listview,
+                    child: Text('ListView'),
                   )
                 ];
               }),
